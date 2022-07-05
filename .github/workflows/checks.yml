@@ -16,6 +16,9 @@ jobs:
         pwd
         ls -l
         id
+        echo "========\n"
+        ls -l ../
+        ls -l ../../
         docker container run \
           --rm \
           --entrypoint ./script \
