@@ -16,13 +16,10 @@ jobs:
         pwd
         ls -l
         id
-        echo "========\n"
-        ls -l ../
-        ls -l ../../
         docker container run \
           --rm \
           --entrypoint ./script \
-          --volume "$PWD":/home/cosmos/download \
+          --volume /home/runner/work/test/test:/home/cosmos/download \
           testvolume
 
     - name: "post check"
