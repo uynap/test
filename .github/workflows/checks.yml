@@ -19,7 +19,7 @@ jobs:
         docker container run \
           --rm \
           --entrypoint ./script \
-          --volume /home/runner/work/test/test:/home/cosmos/download \
+          --volume "$PWD/temp":/home/cosmos/download \
           testvolume
 
     - name: "post check"
