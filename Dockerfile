@@ -10,7 +10,7 @@ COPY --chown=runner go.mod ./
 COPY --chown=runner main.go ./
 COPY --chown=runner script ./
 
-USER root
+#USER root
 RUN mkdir /home/runner/download
 RUN chown runner /home/runner
 RUN chown runner /home/runner/download
