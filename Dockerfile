@@ -1,21 +1,21 @@
 FROM golang:1.18
 
-RUN useradd -d /home/cosmos cosmos
+RUN useradd -d /home/runner runner
 
-USER cosmos
+USER runner
 
-WORKDIR /home/cosmos
+WORKDIR /home/runner
 
-COPY --chown=cosmos go.mod ./
-COPY --chown=cosmos main.go ./
-COPY --chown=cosmos script ./
+COPY --chown=runner go.mod ./
+COPY --chown=runner main.go ./
+COPY --chown=runner script ./
 
 USER root
-RUN mkdir /home/cosmos/download
-RUN chown cosmos /home/cosmos
-RUN chown cosmos /home/cosmos/download
+RUN mkdir /home/runner/download
+RUN chown runner /home/runner
+RUN chown runner /home/runner/download
 
-USER cosmos
-RUN go build -o /home/cosmos/main
+USER runner
+RUN go build -o /home/runner/main
 
-ENTRYPOINT ["/home/cosmos/main"]
+ENTRYPOINT ["/home/runner/main"]

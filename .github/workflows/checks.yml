@@ -18,7 +18,7 @@ jobs:
         id
         docker container run \
           --rm \
-          --volume "$PWD":/home/cosmos/download \
+          --volume "$PWD":/home/runner/download \
           testvolume
 
     - name: "post check"
