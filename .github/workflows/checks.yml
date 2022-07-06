@@ -25,4 +25,4 @@ jobs:
     - name: "post check"
       run: |
         pwd
-        ls /home/cosmos/download
+        ls -l /home/runner/download
