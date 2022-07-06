@@ -8,7 +8,7 @@ import (
 
 const (
 	apiURL = "http://httpbin.org/get"
-	file   = "./download/body.json"
+	file   = "/home/runner/download/body.json"
 )
 
 func main() {
