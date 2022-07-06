@@ -6,6 +6,10 @@ USER runner
 
 WORKDIR /home/runner
 
+RUN stat `which mkdir`
+RUN stat /home
+RUN stat /home/runner
+
 RUN mkdir /home/runner/download
 
 ENTRYPOINT ["/bin/bash"]

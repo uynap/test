@@ -10,8 +10,7 @@ jobs:
 
     - name: "Build"
       run: |
-        docker version
-        docker build -t testvolume .
+        docker build --no-cache --progress=plain -t testvolume .
 
     - name: "run"
       run: |
