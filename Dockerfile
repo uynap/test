@@ -15,5 +15,5 @@ RUN chown runner /home/runner
 RUN chown runner /home/runner/download
 RUN stat /home/runner/download
 
-USER runner
+#USER runner
 ENTRYPOINT ["/home/runner/script"]
