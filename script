@@ -1,5 +1,4 @@
 #!/bin/bash
 
-touch ./download/helloworld.json
+touch /home/runner/download/helloworld.json
 
-exit $?

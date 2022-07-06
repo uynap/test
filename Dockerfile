@@ -6,8 +6,6 @@ USER runner
 
 WORKDIR /home/runner
 
-COPY --chown=runner go.mod ./
-COPY --chown=runner main.go ./
 COPY --chown=runner script ./
 
 USER root
@@ -18,7 +16,4 @@ RUN chown runner /home/runner/download
 RUN stat /home/runner/download
 
 USER runner
-
-RUN go build -o /home/runner/main
-
-ENTRYPOINT ["/home/runner/main"]
+ENTRYPOINT ["/home/runner/script"]
