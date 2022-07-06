@@ -1,6 +1,7 @@
 FROM golang:1.18
 
 RUN useradd -d /home/runner runner
+RUN usermod -u 1001 runner
 
 USER runner
 
