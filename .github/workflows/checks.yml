@@ -25,4 +25,4 @@ jobs:
     - name: "post check"
       run: |
         pwd
-        ls -l /home/runner/download
+        ls -l `pwd`
