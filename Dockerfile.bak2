@@ -1,6 +1,6 @@
 FROM golang:1.18
 
-RUN useradd -d /home/runner -m runner
+RUN useradd -d /home/runner runner
 
 USER runner
 
