@@ -15,7 +15,7 @@ jobs:
     - name: "run"
       run: |
         pwd
-        ls -l
+        stat `pwd`
         id
         docker container run \
           --rm \
